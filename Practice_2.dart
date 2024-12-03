@@ -76,11 +76,11 @@ void main() {
   print(
       "//Medium_4. **Simple Interest Calculator:** Write a program that calculates the simple interest on a loan. Create variables for principal amount, interest rate, and time (in years), and use the formula:(simple interest= (princicalAmount*rate*time)/100");
 
-  var pirinciapalAmount = 34543;
+  var pirincipalAmount = 34543;
   var interestRate = 3;
   var time = 4;
 
-  var simpleInterest = (pirinciapalAmount * interestRate * time) / 100;
+  var simpleInterest = (pirincipalAmount * interestRate * time) / 100;  
   print("Simple interest: $simpleInterest");
 
   print('|||||||||||||||||||||||||||||||||||||');
@@ -151,8 +151,8 @@ void main() {
 
   var second = 3665;
   int toHour = second ~/ 3600;
-  int toMinute = toHour ~/ 60;
-  var toSecond = toMinute * 60;
+  int toMinute = (second % 3600) ~/ 60;
+  var toSecond = second % 60;
   print(
       '$second seconds would be $toHour hour, $toMinute minute, and $toSecond seconds. ');
 
@@ -161,5 +161,5 @@ void main() {
   //Hard_4.**Age in Days Calculator:**Ask the user for their age in years and calculate how many days old they are (approximately). Assume each year has 365 days.
 
   var age = 20;
-  print('age:$age==> to days ${20 * 365}');
+  print('age:$age==> to days ${age * 365}');
 }
